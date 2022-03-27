@@ -4,9 +4,21 @@ namespace MyTestOfRandoms
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Random nr = new Random();
+            int soma = 0;
+
+            Console.WriteLine("Por favor insira os dados a ser lançados");
+
+            int dados = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < dados; i++)
+            {
+                soma += nr.Next(1,6);
+            }
+
+            Console.WriteLine(soma);
         }
     }
 }
